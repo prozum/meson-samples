@@ -21,12 +21,18 @@ emsdk activate latest
 ```
 # Install git, ninja & flatpak
 ```bash
+# Fedora
 sudo dnf install git ninja-build flatpak
-sudo apt install git ninja flatpak
+# Ubuntu
+sudo add-apt-repository ppa:alexlarsson/flatpak
+sudo apt update
+sudo apt install flatpak
 ```
 # Install meson
 ```bash
+# Fedora
 sudo dnf install python3-pip
+# Ubuntu
 sudo apt install python3-pip
 
 sudo pip3 install meson
