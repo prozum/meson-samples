@@ -1,4 +1,4 @@
-project('samples', 'c')
+project('samples', ['c','cpp'])
 
-#subdir('emscripten-meson')
-subdir('emscripten-meson-sdl')
+subdir('hello-world')
+subdir('fractal-sdl')

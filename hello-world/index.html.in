@@ -1295,6 +1295,6 @@
         };
       };
     </script>
-    <script async type="text/javascript" src="@js_name@"></script>
+    <script async type="text/javascript" src="@exe_name@.js"></script>
   </body>
 </html>
