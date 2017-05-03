@@ -6,10 +6,10 @@ ar = '/opt/emsdk-portable/emscripten/1.37.9/emar'
 
 [properties]
 root = '/opt/emsdk-portable/emscripten/1.37.9/system'
-c_args = ['-O2']
-c_link_args = ['-O2']
-cpp_args = ['-O2']
-cpp_link_args = ['-O2']
+c_args = ['-s', 'WASM=1', '-O2']
+c_link_args = ['-s', 'WASM=1','-O2']
+cpp_args = ['-s', 'WASM=1','-O2']
+cpp_link_args = ['-s', 'WASM=1','-O2']
 
 [host_machine]
 system = 'emscripten'
