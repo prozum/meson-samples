@@ -12,14 +12,12 @@ emsdk install latest
 emsdk activate latest
 ```
 
-# Install Git, Ninja & Flatpak
+# Install Git & Ninja
 ```bash
 # Fedora
-sudo dnf install git ninja-build flatpak
+sudo dnf install git ninja-build
 # Ubuntu
-sudo add-apt-repository ppa:alexlarsson/flatpak
-sudo apt update
-sudo apt install flatpak
+sudo dnf install git ninja-build
 ```
 
 # Install Meson
@@ -29,6 +27,7 @@ sudo dnf install python3-pip
 # Ubuntu
 sudo apt install python3-pip
 
+# Shared
 sudo pip3 install meson
 ```
 
@@ -41,8 +40,16 @@ ninja -C build
 
 # Install and run Gnome Builder flatpak (Optional)
 ```bash
-flatpak install --from https://git.gnome.org/browse/gnome-apps-nightly/plain/gnome-builder.flatpakref?h=stable
+# Fedora
+sudo dnf install git ninja-build flatpak
+# Ubuntu
+sudo dnf install git ninja-build flatpak
+sudo add-apt-repository ppa:alexlarsson/flatpak
+sudo apt update
+sudo apt install flatpak
 
+# Shared
+flatpak install --from https://git.gnome.org/browse/gnome-apps-nightly/plain/gnome-builder.flatpakref?h=stable
 flatpak run org.gnome.Builder
 ```
 
@@ -52,5 +59,3 @@ flatpak run org.gnome.Builder
 - [Wine](http://boxedwine.sourceforge.net/b4/games.html)
 - [Busybox](https://tbfleming.github.io/em-shell/)
 - [Drone Simulator](http://game.prozum.dk/randsim/)
-
-
