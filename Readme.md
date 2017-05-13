@@ -1,7 +1,6 @@
-# Requirements
-- Python 3
+# Install dependencies
 
-# Install Emscripten
+## Install Emscripten
 ```bash
 wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
 sudo tar -xf emsdk-portable.tar.gz -C /opt/
@@ -12,7 +11,7 @@ emsdk install latest
 emsdk activate latest
 ```
 
-# Install Git & Ninja
+## Install Git & Ninja
 ```bash
 # Fedora
 sudo dnf install git ninja-build
@@ -20,7 +19,7 @@ sudo dnf install git ninja-build
 sudo dnf install git ninja-build
 ```
 
-# Install Meson
+## Install Meson
 ```bash
 # Fedora
 sudo dnf install python3-pip
@@ -31,9 +30,9 @@ sudo apt install python3-pip
 sudo pip3 install meson
 ```
 
-# Build from CLI
+## Build from CLI
 ```bash
-git clone git@github.com:prozum/samples.git && cd samples
+git clone git@github.com:prozum/meson-samples.git && cd meson-samples
 meson --cross-file=emscripten.txt . build
 ninja -C build
 ```
