@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
     SDL_Window *win = NULL;
     SDL_Renderer *renderer = NULL;
 
-    win = SDL_CreateWindow("cfrac", 0, 0, set.width, set.height, 0);
+    win = SDL_CreateWindow("fractal", 0, 0, set.width, set.height, 0);
     renderer = SDL_CreateRenderer(win, -1,0);
 
     for (y = 0; set.height > y; y++) {
