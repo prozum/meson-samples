@@ -43,19 +43,21 @@ void loop() {
 }
 
 int main(int argc, char *argv[]) {
+    SDL_Window *win = NULL;
+    SDL_Renderer *renderer = NULL;
     int n, x, y;
     int color[3];
     complex rop, op1, op2;
     setting set;
     set.width = 800;
     set.height= 600;
+    set.type = 0;
 
     puts("0: Mandelbrot");
     puts("1: Julia");
     puts("2: Newton");
     puts("Choose fractal:");
     scanf("%i", &set.type);
-    //set.type = 2;
 
     // Setup nice defaults for fractal types
     switch (set.type) {
@@ -97,8 +99,6 @@ int main(int argc, char *argv[]) {
         return -1;
     }
 
-    SDL_Window *win = NULL;
-    SDL_Renderer *renderer = NULL;
 
     win = SDL_CreateWindow("fractal", 0, 0, set.width, set.height, 0);
     renderer = SDL_CreateRenderer(win, -1,0);
@@ -136,7 +136,13 @@ int main(int argc, char *argv[]) {
         SDL_RenderPresent(renderer);
     }
 
+#ifdef __EMSCRIPTEN__
     emscripten_set_main_loop(loop, 60, 1);
+#else
+    while (1) {
+        loop();
+    }
+#endif
 
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(win);
