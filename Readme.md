@@ -22,14 +22,16 @@ sudo apt install git ninja-build python3-pip
 sudo pip3 install meson
 ```
 
-# Build from CLI
+# Build and run
+
+## Build from CLI
 ```bash
 git clone https://github.com/prozum/meson-samples.git && cd meson-samples
 meson --cross-file=emscripten.txt . build
 ninja -C build
 ```
 
-# Run from CLI
+## Run from CLI
 ```bash
 python -m SimpleHTTPServer &
 xdg-open http://localhost:8000/build
@@ -41,7 +43,6 @@ xdg-open http://localhost:8000/build
 # Fedora
 sudo dnf install flatpak
 # Ubuntu
-sudo dnf install flatpak
 sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak
