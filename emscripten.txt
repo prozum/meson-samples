@@ -1,15 +1,19 @@
 [binaries]
-c = '/opt/emsdk-portable/emscripten/1.37.9/emcc'
-cpp = '/opt/emsdk-portable/emscripten/1.37.9/em++'
-ar = '/opt/emsdk-portable/emscripten/1.37.9/emar'
+c = '/opt/emsdk-portable/emscripten/1.38.8/emcc'
+cpp = '/opt/emsdk-portable/emscripten/1.38.8/em++'
+ar = '/opt/emsdk-portable/emscripten/1.38.8/emar'
 #exe_wrapper = 'node'
 
 [properties]
-root = '/opt/emsdk-portable/emscripten/1.37.9/system'
+root = '/opt/emsdk-portable/emscripten/1.38.8/system'
 c_args = ['-s', 'WASM=1', '-O2']
 c_link_args = ['-s', 'WASM=1','-O2']
 cpp_args = ['-s', 'WASM=1','-O2']
 cpp_link_args = ['-s', 'WASM=1','-O2']
+shared_lib_suffix = 'js'
+static_lib_suffix = 'js'
+shared_module_suffix = 'js'
+exe_suffix = 'js'
 
 [host_machine]
 system = 'emscripten'
